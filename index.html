@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f4f8; margin: 0; }
+    header { background: #2c3e50; color: white; text-align: center; padding: 60px 20px; }
+    header h1 { font-size: 42px; margin: 0 0 10px; }
+    header p { color: #a0b4c8; font-size: 18px; }
+    main { max-width: 700px; margin: 40px auto; padding: 0 20px; }
+    .carte { background: white; border-radius: 10px; padding: 30px; margin-bottom: 20px; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background: #217dbb; }
+
+    #message {
+      display: none;
+      margin-top: 16px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 14px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bonjour, je suis [Ton Prénom]</h1>
+    <p>Développeur web · Créateur d'applications</p>
+  </header>
+
+  <main>
+    <div class="carte">
+      <h2>À propos de moi</h2>
+      <p>Je suis passionné par la création de sites web et d'applications.</p>
+    </div>
+
+    <div class="carte">
+      <h2>Me contacter</h2>
+      <p>Email : [ton@email.com]</p>
+
+      <button onclick="afficherMessage()">
+        ✉️ Envoyer un message
+      </button>
+
+      <div id="message">
+        ✅ Merci ! Je vous réponds dans 24h.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function afficherMessage() {
+      let msg = document.getElementById("message");
+      msg.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
